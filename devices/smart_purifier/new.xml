@@ -1,0 +1,6 @@
+<air_purifier_config>
+    <major_version>1.7</major_version>
+    <fan_speed>medium</fan_speed>
+    <filter_replacement_schedule>2024-12-31</filter_replacement_schedule>
+    <air_quality_threshold>52</air_quality_threshold>
+</air_purifier_config>

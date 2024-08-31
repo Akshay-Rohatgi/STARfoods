@@ -1,0 +1,4 @@
+# COSMOFRIDGE SAMPLE UPDATE
+printf "==========================\n"
+printf "[+] SAMPLE FIRMWARE UPDATE\n"
+printf "=========================="
