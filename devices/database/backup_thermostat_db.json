@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "target_temperature": 72,
+        "mode": "heating",
+        "name": "THERMOSTAR01",
+        "visible": true,
+        "desc": "Located in the executive meeting room, this thermostat ensures a comfortable environment for high-level discussions and decision-making. The temperature is carefully controlled to foster focus and productivity during important meetings."
+    },
+    {
+        "id": 2,
+        "target_temperature": 68,
+        "mode": "cooling",
+        "name": "THERMOSTAR02",
+        "visible": true,
+        "desc": "Installed in the break room, this thermostat provides a relaxing atmosphere for employees to unwind and recharge. It maintains a cooler setting to create a refreshing space where staff can enjoy their breaks."
+    },
+    {
+        "id": 3,
+        "target_temperature": 78,
+        "mode": "heating",
+        "name": "THERMOSTAR03",
+        "visible": false,
+        "desc": "This thermostat is located in the food product research lab, where precise temperature control is crucial for maintaining the integrity of experimental conditions. The heating mode ensures that the lab environment is stable and conducive to accurate testing and development."
+    }
+]
