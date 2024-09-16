@@ -1,0 +1,6 @@
+smart_light,password,T0891,houston,off,./smart_light houston,STARLIGHT
+smart_lock,code,Pantry C,Team Moon,Pantry A,Team Cosmic,SQLI,T0819,Team Comet
+smart_token,PULSAR MFA,numeric:4,8671031
+smart_thermostat,2,THERMOSTAR02-JRR212L,./smart_thermostat switch_mode 1,./smart_thermostat set_target 1 74,IDOR,THERMOSTAR03-CR00PK3,78
+smart_fridge,3,T1055,a2e06bd7cbd2e067f1278ff431d2b074
+smart_purifier,QUASAIR,2024-12-31,medium,1.7,debug,1.7.22

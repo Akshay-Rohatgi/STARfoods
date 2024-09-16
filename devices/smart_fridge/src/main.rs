@@ -3,11 +3,12 @@ use std::fs;
 use std::process::Command;
 use std::error::Error;
 
-fn apply_firmware_update(path: &str) -> Result<(), Box<dyn Error>> {
+fn apply_firmware_update(path: &str, dir: &str) -> Result<(), Box<dyn Error>> {
     let output = Command::new("/bin/bash")
         .arg(path)
+        .current_dir(dir)
         .output()?;
-
+ 
     println!("Output:\n{}", String::from_utf8_lossy(&output.stdout));
     if !output.stderr.is_empty() {
         eprintln!("Error:\n{}", String::from_utf8_lossy(&output.stderr));
@@ -35,7 +36,7 @@ fn list_items(items_file: &str) -> Result<(), Box<dyn Error>> {
 fn main() -> Result<(), Box<dyn Error>> {
     let args: Vec<String> = env::args().collect();
     if args.len() < 2 {
-        eprintln!("Usage: {} <command> [<script_path>]", args[0]);
+        eprintln!("Usage: {} <list|update> [<script_path>]", args[0]);
         std::process::exit(1);
     }
 
@@ -48,7 +49,8 @@ fn main() -> Result<(), Box<dyn Error>> {
                 std::process::exit(1);
             }
             let script_path = &args[2];
-            apply_firmware_update(script_path)?;
+            let working_dir: &str = "/var/lib/fridge_data/";
+            apply_firmware_update(script_path, working_dir)?;
         },
         "list" => {
             let path = env::var("DB_PATH").unwrap() + "/items.txt";
